@@ -94,8 +94,6 @@
 	subsystem  	"Component View"
 	quidu      	"572DDE030127"
 	logical_models 	(list unit_reference_list
-	    (object UseCase "NewUseCase"
-		quid       	"57308ACD026B")
 	    (object UseCase "login"
 		quid       	"57308ADF0113")
 	    (object UseCase "register"
@@ -126,6 +124,36 @@
 		quid       	"57308C92026B")
 	    (object UseCase "complain"
 		quid       	"57308CAF01FE")
+	    (object UseCase "restaurant register"
+		quid       	"57308FB00336")
+	    (object UseCase "submit licenses"
+		quid       	"57308FF90317")
+	    (object UseCase "publish goods"
+		quid       	"5730900600F4")
+	    (object UseCase "set delivery fee"
+		quid       	"573090110113")
+	    (object UseCase "set discount"
+		quid       	"5730905F0019")
+	    (object UseCase "accept order"
+		quid       	"573090680394")
+	    (object UseCase "release delivery request"
+		quid       	"573090C203A3")
+	    (object UseCase "rider register"
+		quid       	"5730912B0171")
+	    (object UseCase "accept delivery request"
+		quid       	"5730913702A9")
+	    (object UseCase "update delivery state"
+		quid       	"5730914D01FE")
+	    (object UseCase "confirm delivery"
+		quid       	"5730918F0394")
+	    (object UseCase "audit restaurants"
+		quid       	"573092220394")
+	    (object UseCase "handle disputes"
+		quid       	"57309232023C")
+	    (object UseCase "freeze restaruant"
+		quid       	"5730927401EE")
+	    (object UseCase "launch promotion activity"
+		quid       	"573092F103B3")
 	    (object Class_Category "MeiTuan"
 		quid       	"57308AA20113"
 		exportControl 	"Public"
@@ -135,7 +163,31 @@
 		quid       	"57308AB00384"
 		exportControl 	"Public"
 		logical_models 	(list unit_reference_list)
-		logical_presentations 	(list unit_reference_list)))
+		logical_presentations 	(list unit_reference_list))
+	    (object Class_Category "Restaurant"
+		quid       	"57308ED103A3"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list))
+	    (object Class_Category "Rider"
+		quid       	"57309113020D"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list))
+	    (object Class_Category "Administrator"
+		quid       	"573091E8023C"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			quid       	"573093BD00F4"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list)))))
 	statemachine 	(object State_Machine "State/Activity Model"
 	    quid       	"572DDE1C020E"
 	    states     	(list States
@@ -2404,11 +2456,11 @@
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
-		origin_x   	238
-		origin_y   	828
+		origin_x   	1050
+		origin_y   	0
 		items      	(list diagram_item_list
 		    (object CategoryView "Logical View::MeiTuan" @114
-			location   	(1840, 1056)
+			location   	(2272, 1360)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -2420,20 +2472,20 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@114
-			    location   	(255, 134)
+			    location   	(197, 76)
 			    fill_color 	13434879
 			    nlines     	2
-			    max_width  	3170
+			    max_width  	4150
 			    justify    	0
 			    label      	"MeiTuan")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"57308AA20113"
-			width      	3182
-			height     	1856)
+			width      	4162
+			height     	2581)
 		    (object CategoryView "Logical View::User" @115
-			location   	(896, 1104)
+			location   	(912, 1088)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -2445,7 +2497,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@115
-			    location   	(299, 310)
+			    location   	(315, 294)
 			    fill_color 	13434879
 			    nlines     	2
 			    max_width  	1194
@@ -2746,7 +2798,7 @@
 			quidu      	"57308C6203E2"
 			height     	118)
 		    (object UseCaseView "Logical View::confirm receiving" @128
-			location   	(480, 1712)
+			location   	(512, 1712)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -2758,7 +2810,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@128
-			    location   	(480, 1850)
+			    location   	(512, 1850)
 			    anchor_loc 	1
 			    nlines     	2
 			    max_width  	630
@@ -2770,7 +2822,7 @@
 			quidu      	"57308C730104"
 			height     	118)
 		    (object UseCaseView "Logical View::comment" @129
-			location   	(848, 1712)
+			location   	(896, 1712)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -2782,7 +2834,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@129
-			    location   	(848, 1850)
+			    location   	(896, 1850)
 			    anchor_loc 	1
 			    nlines     	2
 			    max_width  	630
@@ -2794,7 +2846,7 @@
 			quidu      	"57308C92026B"
 			height     	118)
 		    (object UseCaseView "Logical View::complain" @130
-			location   	(1216, 1728)
+			location   	(1248, 1712)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -2806,7 +2858,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@130
-			    location   	(1216, 1866)
+			    location   	(1248, 1850)
 			    anchor_loc 	1
 			    nlines     	2
 			    max_width  	630
@@ -2816,6 +2868,513 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"57308CAF01FE"
+			height     	118)
+		    (object CategoryView "Logical View::Restaurant" @131
+			location   	(2240, 768)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@131
+			    location   	(1643, 293)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	1194
+			    justify    	0
+			    label      	"Restaurant")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"57308ED103A3"
+			width      	1206
+			height     	963)
+		    (object UseCaseView "Logical View::login" @132
+			location   	(512, 480)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@132
+			    location   	(512, 618)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"login")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"57308ADF0113"
+			height     	118)
+		    (object UseCaseView "Logical View::login" @133
+			location   	(512, 480)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@133
+			    location   	(512, 618)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"login")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"57308ADF0113"
+			height     	118)
+		    (object UseCaseView "Logical View::login" @134
+			location   	(1856, 448)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@134
+			    location   	(1856, 586)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"login")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"57308ADF0113"
+			height     	118)
+		    (object UseCaseView "Logical View::restaurant register" @135
+			location   	(2224, 464)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@135
+			    location   	(2224, 602)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"restaurant register")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"57308FB00336"
+			height     	118)
+		    (object UseCaseView "Logical View::submit licenses" @136
+			location   	(2640, 480)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@136
+			    location   	(2640, 618)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"submit licenses")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"57308FF90317"
+			height     	118)
+		    (object UseCaseView "Logical View::publish goods" @137
+			location   	(1856, 752)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@137
+			    location   	(1856, 890)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"publish goods")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5730900600F4"
+			height     	118)
+		    (object UseCaseView "Logical View::set delivery fee" @138
+			location   	(2640, 768)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@138
+			    location   	(2640, 906)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"set delivery fee")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"573090110113"
+			height     	118)
+		    (object UseCaseView "Logical View::set discount" @139
+			location   	(2224, 752)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@139
+			    location   	(2224, 890)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"set discount")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5730905F0019"
+			height     	118)
+		    (object UseCaseView "Logical View::accept order" @140
+			location   	(1856, 1088)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@140
+			    location   	(1856, 1226)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"accept order")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"573090680394"
+			height     	118)
+		    (object UseCaseView "Logical View::release delivery request" @141
+			location   	(2224, 1088)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@141
+			    location   	(2224, 1226)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"release delivery request")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"573090C203A3"
+			height     	118)
+		    (object CategoryView "Logical View::Rider" @142
+			location   	(2208, 1776)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@142
+			    location   	(1649, 1382)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	1118
+			    justify    	0
+			    label      	"Rider")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"57309113020D"
+			width      	1131
+			height     	800)
+		    (object UseCaseView "Logical View::rider register" @143
+			location   	(1936, 1600)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@143
+			    location   	(1936, 1738)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"rider register")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5730912B0171"
+			height     	118)
+		    (object UseCaseView "Logical View::accept delivery request" @144
+			location   	(2432, 1600)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@144
+			    location   	(2432, 1738)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"accept delivery request")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5730913702A9"
+			height     	118)
+		    (object UseCaseView "Logical View::update delivery state" @145
+			location   	(1952, 1888)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@145
+			    location   	(1952, 2026)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"update delivery state")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5730914D01FE"
+			height     	118)
+		    (object UseCaseView "Logical View::confirm delivery" @146
+			location   	(2432, 1888)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@146
+			    location   	(2432, 2026)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"confirm delivery")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5730918F0394"
+			height     	118)
+		    (object CategoryView "Logical View::Administrator" @147
+			location   	(3472, 720)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@147
+			    location   	(3013, 329)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	918
+			    justify    	0
+			    label      	"Administrator")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"573091E8023C"
+			width      	931
+			height     	794)
+		    (object UseCaseView "Logical View::audit restaurants" @148
+			location   	(3232, 496)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@148
+			    location   	(3232, 634)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"audit restaurants")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"573092220394"
+			height     	118)
+		    (object UseCaseView "Logical View::handle disputes" @149
+			location   	(3616, 496)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@149
+			    location   	(3616, 634)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"handle disputes")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"57309232023C"
+			height     	118)
+		    (object UseCaseView "Logical View::freeze restaruant" @150
+			location   	(3200, 848)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@150
+			    location   	(3200, 986)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"freeze restaruant")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5730927401EE"
+			height     	118)
+		    (object UseCaseView "Logical View::launch promotion activity" @151
+			location   	(3616, 848)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@151
+			    location   	(3616, 986)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"launch promotion activity")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"573092F103B3"
 			height     	118)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"572DDE030127"
